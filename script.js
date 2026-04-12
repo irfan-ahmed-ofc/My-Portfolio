@@ -56,3 +56,36 @@ navLi.forEach(li => {
         menuBtn.querySelector('i').classList.remove('fa-times');
     });
 });
+
+const animateSkills = () => {
+    const skillsSection = document.querySelector('#skills');
+    const progressBars = document.querySelectorAll('.progress');
+
+    if (!skillsSection) return;
+
+    const observerOptions = {
+        threshold: 0.2
+    };
+
+    const skillObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                progressBars.forEach(bar => {
+                    const targetWidth = bar.style.width;
+                    bar.style.width = '0px';
+                    
+                    requestAnimationFrame(() => {
+                        setTimeout(() => {
+                            bar.style.width = targetWidth;
+                        }, 100);
+                    });
+                });
+                skillObserver.unobserve(entry.target);
+            }
+        });
+    }, observerOptions);
+
+    skillObserver.observe(skillsSection);
+};
+
+animateSkills();
