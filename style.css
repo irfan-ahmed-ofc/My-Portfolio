@@ -129,3 +129,20 @@ body { background: var(--dark); color: var(--text-main); overflow-x: hidden; }
     .hero-text h1 { font-size: 2.8rem; }
 }
 
+
+.contact-form {background: var(--card-bg); padding: 40px; border-radius: 20px; border: 1px solid #333; max-width: 600px; margin: 0 auto 30px auto; transition: var(--transition);}
+.contact-form:hover { border-color: var(--primary); }
+.input-group { margin-bottom: 20px;}
+.input-group input, 
+.input-group textarea { width: 100%; padding: 15px; background: rgba(255, 255, 255, 0.02); border: 1px solid #444; border-radius: 10px; color: var(--text-main); font-size: 1rem; outline: none; transition: var(--transition); font-family: inherit; }
+.input-group input:focus, 
+.input-group textarea:focus { border-color: var(--primary); background: transparent; box-shadow: 0 0 15px rgba(46, 204, 113, 0.1);}
+.input-group input::placeholder,
+.input-group textarea::placeholder { color: var(--text-dim); opacity: 0.6;}
+.submit-btn { width: 100%; cursor: pointer; border: none; font-size: 1.1rem; padding: 15px 0; border-radius: 50px !important; display: block;}
+
+@media (max-width: 600px) {
+    .contact-form {
+        padding: 25px 15px;
+    }
+}

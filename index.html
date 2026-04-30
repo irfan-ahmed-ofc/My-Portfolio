@@ -19,6 +19,7 @@
             <ul>
                 <li class="active"><a href="#home"><i class="fas fa-home"></i> Home</a></li>
                 <li><a href="#about"><i class="fas fa-user"></i> About Me</a></li>
+                <li><a href="#experience"><i class="fas fa-briefcase"></i> Experience</a></li>
                 <li><a href="#services"><i class="fas fa-laptop-code"></i> Services</a></li>
                 <li><a href="#skills"><i class="fas fa-laptop-code"></i> Skills</a></li>
                 <li><a href="#gallery"><i class="fas fa-images"></i> Gallery</a></li>
@@ -54,6 +55,32 @@
                 <div class="about-card">
                     <p>I am a dedicated <strong>Aspiring Software Developer</strong> with a deep passion for building digital solutions. My journey started with a curiosity for how things work behind the screen, which led me to dive deep into <strong>Python</strong> and <strong>Web Development</strong>.</p>
                     <p>Currently, I am focused on mastering modern frameworks and writing clean, efficient code. I love solving complex problems and turning creative ideas into functional reality.</p>
+                </div>
+            </section>
+
+            <section id="experience" class="section reduced-gap">
+                <h2 class="section-title">Experience</h2>
+                <div class="services-grid">
+                    <div class="service-card">
+                        <i class="fas fa-laptop-code"></i>
+                        <h3>Portfolio Website</h3>
+                        <p>Designed and developed a responsive personal portfolio using HTML, CSS, and JavaScript. Implemented modern UI and sidebar navigation.</p>
+                    </div>
+                    <div class="service-card">
+                        <i class="fab fa-python"></i>
+                        <h3>Python Projects</h3>
+                        <p>Built automation scripts and logic-based programs using Python. Focused on writing clean and efficient code.</p>
+                    </div>
+                    <div class="service-card">
+                        <i class="fas fa-code"></i>
+                        <h3>Web Development Practice</h3>
+                        <p>Creating responsive layouts and improving UI/UX skills through hands-on frontend projects and modern styling.</p>
+                    </div>
+                    <div class="service-card">
+                        <i class="fas fa-brain"></i>
+                        <h3>Problem Solving</h3>
+                        <p>Solving algorithmic problems using Python to improve analytical thinking and data structure knowledge.</p>
+                    </div>
                 </div>
             </section>
 
@@ -143,8 +170,24 @@
                 </div>
             </section>
 
-            <section id="contact" class="section reduced-gap">
-                <h2 class="section-title">Contact Me</h2>
+             <section id="contact" class="section reduced-gap">
+                <h2 class="section-title">Contact Me</h2> 
+                <div class="contact-container">
+                <form action="https://formspree.io/f/xbdwjrvw" method="POST" class="contact-form">
+                    <div class="input-group">
+                        <input type="text" name="name" placeholder="Your Name" required>
+                    </div>
+                    <div class="input-group">
+                        <input type="email" name="email" placeholder="Your Email" required>
+                    </div>
+                    <div class="input-group">
+                        <input type="text" name="subject" placeholder="Subject" required>
+                    </div>
+                    <div class="input-group">
+                        <textarea name="message" placeholder="Message" rows="6" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-fill submit-btn">Send Message</button>
+                </form>
                 <div class="social-wrapper">
                     <a href="https://linkedin.com/in/irfan-ahmed-ofc" target="_blank" class="social-btn linkedin">
                         <i class="fab fa-linkedin"></i> LinkedIn
@@ -159,10 +202,12 @@
                         <i class="fab fa-x-twitter"></i> X (Twitter)
                     </a>
                 </div>
+                </div>
+
                 <footer class="footer">
                     <p>© 2026 Irfan Ahmed | Designed with ❤️</p>
                 </footer>
-            </section>
+             </section>
 
         </main>
     </div>

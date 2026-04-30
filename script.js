@@ -57,21 +57,3 @@ navLi.forEach(li => {
     });
 });
 
-const animateSkills = () => {
-    const progressBars = document.querySelectorAll('.progress');
-    
-    const skillObserver = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                progressBars.forEach(bar => {
-                    const percentage = bar.parentElement.nextElementSibling.innerText; 
-                    bar.style.width = percentage;
-                });
-                skillObserver.unobserve(entry.target);
-            }
-        });
-    }, { threshold: 0.5 });
-
-    const skillsSection = document.querySelector('#skills');
-    if(skillsSection) skillObserver.observe(skillsSection);
-};
