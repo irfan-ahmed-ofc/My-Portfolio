@@ -57,3 +57,43 @@ navLi.forEach(li => {
     });
 });
 
+
+const portfolioForm = document.getElementById('portfolio-form');
+const formStatus = document.getElementById('form-status');
+const submitBtn = document.getElementById('submit-btn');
+
+portfolioForm.addEventListener('submit', async function(e) {
+    e.preventDefault();
+    
+    const originalBtnText = submitBtn.innerText;
+    submitBtn.innerText = "Sending...";
+    submitBtn.disabled = true;
+
+    const formData = new FormData(portfolioForm);
+
+    try {
+        const response = await fetch("https://formspree.io/f/xbdwjrvw", {
+            method: "POST",
+            body: formData,
+            headers: { 'Accept': 'application/json' }
+        });
+
+        if (response.ok) {
+            portfolioForm.style.display = "none";
+            formStatus.style.display = "block";
+            portfolioForm.reset();
+        } else {
+            alert("Submission failed. Try again.");
+        }
+    } catch (error) {
+        alert("Error connecting to server.");
+    } finally {
+        submitBtn.innerText = originalBtnText;
+        submitBtn.disabled = false;
+    }
+});
+
+function resetForm() {
+    formStatus.style.display = "none";
+    portfolioForm.style.display = "block";
+}

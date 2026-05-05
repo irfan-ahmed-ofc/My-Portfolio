@@ -178,44 +178,62 @@
                 </div>
             </section>
 
-             <section id="contact" class="section reduced-gap">
+            <section id="contact" class="section reduced-gap">
                 <h2 class="section-title">Contact Me</h2> 
                 <div class="contact-container">
-                <form action="https://formspree.io/f/xbdwjrvw" method="POST" class="contact-form">
-                    <div class="input-group">
-                        <input type="text" name="name" placeholder="Your Name" required>
-                    </div>
-                    <div class="input-group">
-                        <input type="email" name="email" placeholder="Your Email" required>
-                    </div>
-                    <div class="input-group">
-                        <input type="text" name="subject" placeholder="Subject" required>
-                    </div>
-                    <div class="input-group">
-                        <textarea name="message" placeholder="Message" rows="6" required></textarea>
-                    </div>
-                    <button type="submit" class="btn btn-fill submit-btn">Send Message</button>
-                </form>
-                <div class="social-wrapper">
-                    <a href="https://linkedin.com/in/irfan-ahmed-ofc" target="_blank" class="social-btn linkedin">
-                        <i class="fab fa-linkedin"></i> LinkedIn
-                    </a>
-                    <a href="https://facebook.com/irfanahmed.ofc" target="_blank" class="social-btn facebook">
-                        <i class="fab fa-facebook"></i> Facebook
-                    </a>
-                    <a href="https://instagram.com/irfanahmed.ofc" target="_blank" class="social-btn instagram">
-                        <i class="fab fa-instagram"></i> Instagram
-                    </a>
-                    <a href="https://x.com/Irfan_ahmed_ofc" target="_blank" class="social-btn x-twitter">
-                        <i class="fab fa-x-twitter"></i> X (Twitter)
-                    </a>
-                </div>
-                </div>
+                    <form id="portfolio-form" class="contact-form">
+                        <div class="input-group">
+                            <input type="text" name="name" placeholder="Your Name" required>
+                        </div>
+                        <div class="input-group">
+                            <input type="email" name="email" placeholder="Your Email" required>
+                        </div>
+                        <div class="input-group">
+                            <input type="text" name="subject" placeholder="Subject" required>
+                        </div>
+                        <div class="input-group">
+                            <textarea name="message" placeholder="Message" rows="6" required></textarea>
+                        </div>
+                        <button type="submit" id="submit-btn" class="btn btn-fill submit-btn">Send Message</button>
+                    </form>
 
-                <footer class="footer">
-                    <p>© 2026 Irfan Ahmed | Designed with ❤️</p>
-                </footer>
-             </section>
+                    <div id="form-status" class="success-box" style="display: none;">
+                        <div class="success-icon">
+                            <i class="fas fa-paper-plane"></i>
+                        </div>
+                        <h2>Message Sent!</h2>
+                        <p>Thank you for reaching out. Irfan will get back to you shortly.</p>
+            
+                        <div class="success-btn-group">
+                            <a href="#home" class="btn btn-outline" onclick="resetForm()">
+                                 <i class="fas fa-home"></i> Back to home
+                            </a>
+                        <button class="btn btn-fill" onclick="resetForm()">
+                                <i class="fas fa-redo"></i>  Send another
+                         </button>
+                        </div>
+                    </div>
+
+                    <div class="social-wrapper">
+                        <a href="https://linkedin.com/in/irfan-ahmed-ofc" target="_blank" class="social-btn linkedin">
+                            <i class="fab fa-linkedin"></i> LinkedIn
+                        </a>
+                        <a href="https://facebook.com/irfanahmed.ofc" target="_blank" class="social-btn facebook">
+                            <i class="fab fa-facebook"></i> Facebook
+                        </a>
+                        <a href="https://instagram.com/irfanahmed.ofc" target="_blank" class="social-btn instagram">
+                            <i class="fab fa-instagram"></i> Instagram
+                        </a>
+                        <a href="https://x.com/Irfan_ahmed_ofc" target="_blank" class="social-btn x-twitter">
+                            <i class="fab fa-x-twitter"></i> X (Twitter)
+                        </a>
+                    </div>
+
+                    <footer class="footer">
+                        <p>© 2026 Irfan Ahmed | Designed with ❤️</p>
+                    </footer>
+                </div>
+            </section>
 
         </main>
     </div>
